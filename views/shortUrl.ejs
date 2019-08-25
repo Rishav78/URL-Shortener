@@ -8,16 +8,6 @@
             <input type="text" id="url" />
             <button>submit</button>
         </form>
-        <script>
-            $('form').submit(function(e){
-                e.preventDefault();
-                let data = {
-                    urlLink: $('#url').val(),
-                };
-                $.post('/shorturl', data, function(result, status){
-                    
-                });
-            });
-        </script>
+        <script src="/shortUrl.js"></script>
     </body>
 </html>
