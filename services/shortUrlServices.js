@@ -31,7 +31,7 @@ function getSaveUrl(req, res) {
         urlKey: req.params.id
     },{originalUrl: 1})
         .then((result) => {
-            res.redirect(result.originalUrl);
+            result ? res.redirect(result.originalUrl) : res.redirect('/error');
         })
 }
 
